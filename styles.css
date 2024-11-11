@@ -22,7 +22,19 @@ body {
 }
 
 #container {
-    height: 700px;
-    width: 700px;
+    height: 640px;
+    width: 642px;
     border: 1px solid #9B3922;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.squareStyle {
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+}
+
+.squareStyle:hover {
+    background-color: #F2613F;
 }
