@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     background-color: #0C0C0C;
-    color: #9B3922;
+    color: #F2613F;
 }
 
 body {
@@ -19,6 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #container {
@@ -29,5 +30,17 @@ body {
     border: 1px solid white;
 }
 
-.square-style {
+button {
+    background-color: aqua;
+    width: 100px;
+    height: 30px;
+    color: black;
+    border: none;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: rgb(73, 72, 72);
+    color: aqua;
+    cursor: pointer;
 }

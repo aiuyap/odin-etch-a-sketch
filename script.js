@@ -23,7 +23,6 @@ function createBoxes (numOfBox, squareWH) {
 
 function addStyleToBoxes () {
     const allSquare = document.querySelectorAll(".square-style");
-    let randomColor = Math.floor(Math.random()*16777215).toString(16);
 
     for (let i = 0; i < allSquare.length; i++) {
         allSquare[i].addEventListener("mouseover", () => {
