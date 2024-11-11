@@ -46,7 +46,7 @@ function changeColor (box) {
 }
 
 function getSize () {
-    const getInput = + prompt("Select how many tiles per side (e.g 16 will be 16x16). Maximum of 100:")
+    const getInput = + prompt("Select how many tiles per side. Maximum of 100. (e.g 16 will be 16x16)")
 
     if (Number.isInteger(getInput) && getInput <= 100) {
         return getInput
