@@ -35,9 +35,18 @@ function addStyleToBoxes () {
 
     for (let i = 0; i < allSquare.length; i++) {
         allSquare[i].addEventListener("mouseover", () => {
-            changeColor(allSquare[i]); 
+            changeColor(allSquare[i]);
+            changeOpacity(allSquare[i]);
         });
     }
+}
+
+function changeOpacity (box) {
+    const boxStyle = window.getComputedStyle(box, null);
+    let currentOpacity = + boxStyle.getPropertyValue("opacity");
+    currentOpacity += 0.1;
+    box.style["opacity"] = currentOpacity.toString();
+
 }
 
 function changeColor (box) {
