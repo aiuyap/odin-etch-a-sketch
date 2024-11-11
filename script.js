@@ -1,16 +1,30 @@
-const boxContainer = document.querySelector("#container");
-const square = document.createElement("div");
-square.classList.add("squareStyle");
+let sideMaxCount = 16;
+let squareSize = 800 / sideMaxCount; //container is 800px per side
 
-for (let i = 0; i < 256; i++) {
+createBoxes();
+addStyleToBoxes(squareSize);
 
-    boxContainer.appendChild(square.cloneNode());
+
+
+function createBoxes () {
+    const boxContainer = document.querySelector("#container");
+    const square = document.createElement("div");
+    square.classList.add("squareStyle");
+
+    for (let i = 0; i < 256; i++) {
+
+        boxContainer.appendChild(square.cloneNode());
+    }
 }
 
-const allSquare = document.querySelectorAll(".squareStyle");
+function addStyleToBoxes (squareWH) {
+    const allSquare = document.querySelectorAll(".squareStyle");
 
-for (let i = 0; i < allSquare.length; i++) {
-    allSquare[i].addEventListener("mouseover", () => {
-        allSquare[i].style["background-color"] = "#F2613F";
-    });
+    for (let i = 0; i < allSquare.length; i++) {
+        allSquare[i].addEventListener("mouseover", () => {
+            allSquare[i].style["background-color"] = "#F2613F"; 
+        });
+        allSquare[i].style["width"] = squareWH.toString() + "px";
+        allSquare[i].style["height"] = squareWH.toString()+ "px";
+    }
 }
